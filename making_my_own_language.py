@@ -1,10 +1,17 @@
 def translate(phrase):
     translation =""
-    for word in phrase:
-        if word.lower() in "manu,mrunali,you":
-           translation=translation+"bokad"+phrase
+    #split the sentance into words
+    words = phrase.split()
+    for word in words:
+        if word.lower() in ["mohit"]:
+           if word.isupper:
+               translation+="Aryan"
+           else:
+               translation+=" aryan "
+           
+        else:
+            translation += word + " "
         
     return translation
 print(translate(input("What People say about u? :")))
 
-#Complet from chat gpt 
